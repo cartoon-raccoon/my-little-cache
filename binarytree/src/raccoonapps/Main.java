@@ -5,7 +5,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Main {
-
+    
+    //driver code
     public static void main(String[] args) throws IOException {
         BufferedReader inputReader =
                 new BufferedReader(new InputStreamReader(System.in));
@@ -89,7 +90,8 @@ public class Main {
             }
         }
     }
-
+    
+    //core methods
     private static void addNode(Node node, int inputValue) {
         if (inputValue < node.value) {
             if (node.left == null) {
@@ -120,9 +122,7 @@ public class Main {
         } else if (key < node.value) {
             if (node.left == null) {
                 return false;
-            } else {
-                return containsValue(node.left, key);
-            }
+            } else {return containsValue(node.left, key);}
         } else {
             if (node.right == null) {
                 return false;
